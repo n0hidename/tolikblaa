@@ -4,7 +4,7 @@ sudo apt update && sudo apt install gnome-terminal -y && sudo apt install openvp
 
 mkdir -p /home/$(whoami)/tolikblaa/Dolphin/Browsers
 wget -O /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar https://dl.gologin.com/gologin.tar
-gologin=$(tar -xvf /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar)
+gologin=$(tar -xvf /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar -C /home/$(whoami)/tolikblaa/Dolphin/Browsers/)
 
 OUTPUT=$(whoami)
 
@@ -24,7 +24,7 @@ Name=Gologin
 Icon=/home/${OUTPUT}/tolikblaa/Dolphin/DolphinLogo.png"
 echo "$var" > "/home/$(whoami)/Desktop/Gologin.Desktop"
 
-sudo chmod ugo+rwx /home/$(whoami)/Desktop/Dolphin.Desktop
+sudo chmod ugo+rwx /home/$(whoami)/Desktop/Gologin.Desktop
 sudo chmod ugo+rwx /home/$(whoami)/Desktop/OpenVPN.Desktop
 sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/Dolphin/Browsers/$gologin
 sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/OpenVpn/OpenVpn.sh
