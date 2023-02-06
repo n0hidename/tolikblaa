@@ -19,14 +19,14 @@ echo "$var" > "/home/$(whoami)/Desktop/OpenVPN.Desktop"
 var="[Desktop Entry]
 Type=Application
 Terminal=false
-Exec=sudo /home/${OUTPUT}/tolikblaa/Dolphin/Browsers/GoLogin-3.2.6 --no-sandbox
+Exec=sudo /home/${OUTPUT}/tolikblaa/Dolphin/Browsers/GoLogin-3.2.8 --no-sandbox
 Name=Gologin
 Icon=/home/${OUTPUT}/tolikblaa/Dolphin/DolphinLogo.png"
 echo "$var" > "/home/$(whoami)/Desktop/Gologin.Desktop"
 
 sudo chmod ugo+rwx /home/$(whoami)/Desktop/Dolphin.Desktop
 sudo chmod ugo+rwx /home/$(whoami)/Desktop/OpenVPN.Desktop
-sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/Dolphin/Browsers/GoLogin-3.2.6
+sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/Dolphin/Browsers/GoLogin-3.2.8
 sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/OpenVpn/OpenVpn.sh
 
 exit 0
