@@ -4,7 +4,7 @@ sudo apt update && sudo apt install gnome-terminal -y && sudo apt install openvp
 
 mkdir -p /home/$(whoami)/tolikblaa/Dolphin/Browsers
 wget -O /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar https://dl.gologin.com/gologin.tar
-tar –xvf /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar 
+tar -xvf /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar
 
 OUTPUT=$(whoami)
 
