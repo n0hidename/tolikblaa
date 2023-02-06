@@ -4,7 +4,7 @@ sudo apt update && sudo apt install gnome-terminal -y && sudo apt install openvp
 
 mkdir -p /home/$(whoami)/tolikblaa/Dolphin/Browsers
 wget -O /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar https://dl.gologin.com/gologin.tar
-tar -xvf /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar
+gologin=$(tar -xvf /home/$(whoami)/tolikblaa/Dolphin/Browsers/gologin.tar)
 
 OUTPUT=$(whoami)
 
@@ -19,14 +19,14 @@ echo "$var" > "/home/$(whoami)/Desktop/OpenVPN.Desktop"
 var="[Desktop Entry]
 Type=Application
 Terminal=false
-Exec=sudo /home/${OUTPUT}/tolikblaa/Dolphin/Browsers/GoLogin-3.2.8 --no-sandbox
+Exec=sudo /home/${OUTPUT}/tolikblaa/Dolphin/Browsers/${gologin} --no-sandbox
 Name=Gologin
 Icon=/home/${OUTPUT}/tolikblaa/Dolphin/DolphinLogo.png"
 echo "$var" > "/home/$(whoami)/Desktop/Gologin.Desktop"
 
 sudo chmod ugo+rwx /home/$(whoami)/Desktop/Dolphin.Desktop
 sudo chmod ugo+rwx /home/$(whoami)/Desktop/OpenVPN.Desktop
-sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/Dolphin/Browsers/GoLogin-3.2.8
+sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/Dolphin/Browsers/$gologin
 sudo chmod ugo+rwx /home/$(whoami)/tolikblaa/OpenVpn/OpenVpn.sh
 
 exit 0
